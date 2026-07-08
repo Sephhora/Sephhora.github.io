@@ -1,0 +1,603 @@
+/* ====================== ROOT CSS VARIABLES ====================== */
+:root {
+  --primary-color: #3949ab;          /* Deep indigo (more professional & accessible) */
+  --primary-bg: #f4f6fa;             /* Very light cool gray background */
+  --white: #ffffff;                  /* Pure white */
+  --hover-bg: #e8eaf6;               /* Indigo-tinted light hover */
+  --text-dark: #2c2c2c;              /* Dark gray for readability */
+  --text-light: #ffffff;             /* White for text on dark elements */
+  --table-alt-row: #ffffff;          /* Alternating white row */
+  --table-even-row: #f0f1f6;         /* Soft cool gray */
+  --search-bg: #e8eaf6;              /* Same as hover-bg for consistency */
+  --card-hover-shadow: rgba(57, 73, 171, 0.2); /* Shadow with primary color tone */
+}
+
+
+/* ====================== GLOBAL RESET & FONT ====================== */
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ====================== BODY LAYOUT ====================== */
+body {
+  display: flex;
+  flex-direction: row; /* sidebar + main */
+  margin: 0;
+}
+
+/* ====================== SIDEBAR STARTS HERE====================== */
+.sidebar {
+  position: sticky;
+  height: 100vh;
+  width: 110px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0 1.7rem;
+  color: var(--text-light);
+  overflow: hidden;
+  background-color: var(--white);
+  transition: all 0.5s linear;
+}
+
+.sidebar:hover {
+  width: 240px; /* Expand sidebar on hover */
+  transition: 0.5s;
+}
+
+/* ====================== LOGO SECTION ====================== */
+.logo {
+  /*margin: 0.5rem;
+  margin-bottom: 1rem;
+  margin-left:0.3rem;*/
+  margin: 0.5rem 0.5rem 1rem 0.3rem;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  height: 35px;
+  width: 35px;
+}
+
+.logo p {
+  font-size: 25px;
+  font-weight: bolder;
+  color: var(--primary-color);
+  overflow: hidden;
+}
+
+/* ====================== MENU LINKS ====================== */
+.menu {
+  height: 86%;
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 1rem;
+  margin: 8px 0;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover,
+.active {
+  background-color: var(--hover-bg); /* Highlight item on hover or if active */
+}
+
+.menu a {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.menu a span {
+  overflow: hidden;
+}
+
+.menu a i {
+  font-size: 1.2rem;
+}
+
+/* ====================== LOGOUT POSITIONING ====================== */
+.logout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+/* ====================== SIDEBAR ENDS HERE====================== */
+
+/* ====================== MAIN CONTENT STARTS HERE====================== */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+.main--content {
+  position: relative;
+  background-color: var(--primary-bg); /* ✅ KEEP this */
+  width: 100%;
+  padding: 1rem 2.5rem;
+}
+
+/* ====================== HEADER ====================== */
+.header--wrapper {
+  position: sticky; /* Or use fixed for always visible header */
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--white);
+  border-radius: 0; /* Remove rounded corners if sticking to top */
+  padding: 10px 2rem;
+  margin: 0; /* REMOVE margin to stick to the top */
+}
+
+.header--wrapper img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.header--title {
+  color: var(--primary-color);
+}
+
+.user--info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user--info p {
+  color: var(--primary-color);
+}
+
+/* ====================== SECTION 1:STARTS HERE ====================== */
+.section-1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Style wrapper to align heading and buttons on the same row */
+.stats-top-section {
+  display: flex;
+  justify-content: space-between; /* Push heading left, buttons right */
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+/* Round, padded buttons */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rounded-btn {
+  padding: 8px 16px;
+  color: var(--primary-color);
+  background-color: var(--text-light);
+  border: none;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid var(--primary-color);
+}
+
+.rounded-btn:hover {
+  background-color: var(--hover-bg);
+}
+
+/* ====================== STATS CARD CONTAINER ====================== */
+
+.stats-cards-container {
+  width: 59.2%;
+  height: 200px;
+  background-color: var(--primary-bg);
+  /*background-color: #f6f8fc;*/
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stats-cards-container .card-title {
+  color: var(--primary-color);
+}
+
+.stats-cards-slider {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* ====================== INDIVIDUAL STATS CARDS ====================== */
+.stats-cards {
+  height: 130px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--primary-color);
+  background-color: var(--white);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  
+}
+
+.stats-cards:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px var(--card-hover-shadow);
+  cursor: pointer;
+  background-color: var(--hover-bg);
+  color: var(--primary-color);
+}
+
+.stats-cards span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.new_section {
+  width: 40%;
+  height: 200px;
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  color: var(--primary-color);
+}
+
+
+/* ====================== SECTION 1:PROGRESS BAR SECTION====================== */
+.progress-bar-section {
+  width: 40%;
+  height: 200px;
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Progress Bar Styles === */
+
+.progress-header {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.goal-progress-wrapper {
+  margin-top: 1rem;
+}
+
+.progress-row {
+  margin-bottom: 1.5rem;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-title {
+  font-weight: 500;
+  color: var(--text-dark, #333);
+}
+
+.progress-percent {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.progress-percent.green {
+  color: #2e7d32;
+}
+
+.progress-percent.red {
+  color: #ef5350;
+}
+
+.progress-bar-container {
+  background-color: #f1f3f6;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 6px 0;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+/* Colors */
+.progress-bar-fill.green {
+  background-color: #2e7d32;
+}
+.progress-bar-fill.red {
+  background-color: #ef5350;
+}
+.progress-bar-fill.yellow {
+  background-color: #fbc02d;
+}
+
+.progress-subtext {
+  font-size: 13px;
+  color: #666;
+}
+
+
+/* ====================== SECTION 1 ENDS HERE ====================== */
+
+/* ====================== SECTION 2 STARTS HERE ====================== */
+
+/* ====================== CHART AREA ====================== */
+
+.section-2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Container 1 - 60% width */
+.graph--container-1 {
+  background: var(--white);
+  width: 60%;
+  height: 350px;
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  
+}
+.chart-dropdown {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+.chart-dropdown select {
+  padding: 6px 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background-color: var(--white);
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.chart-dropdown select:hover {
+  outline: none;
+  box-shadow: 0 0 3px var(--primary-color);
+}
+
+
+
+/* Container 2 - 40% width */
+.graph--container-2 {
+  background: var(--white);
+  width: 40%;
+  height: 350px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.graph--container-2 .chart-dropdown {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  background-color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.graph--container-2 .chart-dropdown select {
+  padding: 6px 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background-color: var(--white);
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.graph--container-2 .chart-dropdown select:hover {
+  outline: none;
+  box-shadow: 0 0 3px var(--primary-color);
+}
+
+
+/* Chart Canvas Styling */
+.chart-canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+.chart-switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+.chart-switch button {
+  margin-left: 5px;
+  padding: 6px 12px;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.chart-switch button:hover {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+}
+/* ====================== SECTION 2 ENDS HERE ====================== */
+
+
+/* ====================== SECTION 3:CHART + TABLE STARTS HERE ====================== */
+.section-3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* ======================  SECTION 3:CHART STARTS HERE ====================== */
+.graph--container-3 {
+  background: var(--white);
+  width: 59.2%;
+  height: 350px;
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+/* ====================== SECTION 3:CHART ENDS HERE ====================== */
+
+
+/* ====================== SECTION 3:TABLE WRAPPER STARTS HERE====================== */
+
+.main--title {
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+}
+
+.tabular--wrapper {
+  background-color: var(--white);
+  width: 39%;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  height: 350px;
+  overflow: auto;
+
+  /* Hide scrollbars */
+  scrollbar-width: none;          
+  -ms-overflow-style: none;       
+}
+
+.tabular--wrapper::-webkit-scrollbar {
+  display: none;                  
+}
+
+.table--container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 300px;
+}
+
+thead {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--hover-bg);
+}
+
+th {
+  text-align: left;
+  padding: 12px 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: var(--hover-bg);
+}
+
+td {
+  padding: 12px 8px;
+  color: var(--text-dark);
+  font-weight: 400;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+tfoot {
+  background-color: var(--white);
+  font-weight: bold;
+  border-top: 2px solid var(--hover-bg);
+}
+
+tfoot td {
+  padding: 12px 8px;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .section-3 {
+    flex-direction: column;
+  }
+
+  .graph--container-3,
+  .tabular--wrapper {
+    width: 100%;
+  }
+}
+/* ====================== SECTION 3:TABLE WRAPPER ENDS HERE ====================== */
+/* ====================== SECTION 3 ENDS HERE ====================== */
+
+/* ====================== MAIN CONTENT ENDS HERE====================== */

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/finance-tracker/css/login_styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Section -->
+      <div class="left-section">
+        <div class="expenses-card-left">
+          <div class="expense-title">
+            <span class="icon">📊</span> May 2025 Expenses
+          </div>
+          <div class="expense-amount">$2,000</div>
+          <div class="expense-change"><span>⬆️</span> 5%</div>
+
+          <div class="graph-container">
+            <div class="bar" style="--height: 60%"></div>
+            <div class="bar" style="--height: 35%"></div>
+            <div class="bar" style="--height: 45%"></div>
+            <div class="bar today" style="--height: 80%"></div>
+            <div class="bar" style="--height: 55%"></div>
+            <div class="bar" style="--height: 30%"></div>
+            <div class="bar" style="--height: 40%"></div>
+          </div>
+
+          <div class="days-labels">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span>
+            <span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+        </div>
+
+        <div class="expenses-card-right">
+          <div class="expense-title">
+            <span class="icon">📊</span> June 2025 Expenses
+          </div>
+          <div class="expense-amount">$12,000</div>
+          <div class="expense-change"><span>⬆️</span> 12%</div>
+
+          <div class="graph-container">
+            <div class="bar" style="--height: 60%"></div>
+            <div class="bar" style="--height: 35%"></div>
+            <div class="bar" style="--height: 45%"></div>
+            <div class="bar today" style="--height: 80%"></div>
+            <div class="bar" style="--height: 55%"></div>
+            <div class="bar" style="--height: 30%"></div>
+            <div class="bar" style="--height: 40%"></div>
+          </div>
+
+          <div class="days-labels">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span>
+            <span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="right-section">
+        <div class="logo">
+          <img src="/finance-tracker/assests/budget.png" alt="logo" />
+          <span>FinTrack Pro</span>
+        </div>
+        <h1>Join the FinTrack Pro Family!</h1>
+        <p class="subtext">Log in to continue your financial journey.</p>
+
+        <form id="signup-form">
+          <div class="input-row">
+            <input type="text" placeholder="Full Name *" required />
+            <input type="text" placeholder="Phone Number *" required />
+          </div>
+          <input type="email" placeholder="Email *" required />
+          <div class="input-row">
+            <input type="password" placeholder="Password *" required />
+            <input
+              type="password"
+              placeholder="Re-enter Your Password *"
+              required
+            />
+          </div>
+
+          <!-- ✅ Correct submit button -->
+          <button type="submit" class="sign-in">Sign Up!</button>
+
+          <p class="login-text">
+            Already have an account? <a href="login.html">Log In</a>
+          </p>
+          <button type="button" class="google-btn">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/300/300221.png"
+              alt="Google Icon"
+            />
+            Sign up with Google
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ✅ JS: Redirect after form submission -->
+    <script>
+      document
+        .getElementById("signup-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          // Optional: Add validation here later
+          window.location.href = "dashboard.html";
+        });
+    </script>
+  </body>
+</html>

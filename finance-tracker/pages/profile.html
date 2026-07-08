@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Profile</title>
+    <link rel="stylesheet" href="/finance-tracker/css/login_styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Section -->
+      <!-- <div class="left-section">
+        <div class="expenses-card-left">
+          <div class="expense-title">
+            <span class="icon">📊</span> May 2025 Expenses
+          </div>
+          <div class="expense-amount">$2,000</div>
+          <div class="expense-change"><span>⬆️</span> 5%</div>
+
+          <div class="graph-container">
+            <div class="bar" style="--height: 60%"></div>
+            <div class="bar" style="--height: 35%"></div>
+            <div class="bar" style="--height: 45%"></div>
+            <div class="bar today" style="--height: 80%"></div>
+            <div class="bar" style="--height: 55%"></div>
+            <div class="bar" style="--height: 30%"></div>
+            <div class="bar" style="--height: 40%"></div>
+          </div>
+
+          <div class="days-labels">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span>
+            <span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+        </div>
+      </div> -->
+      <div class="left-section">
+        <div class="expenses-card-left">
+          <div class="expense-title">
+            <span class="icon">📊</span> May 2025 Expenses
+          </div>
+          <div class="expense-amount">$2,000</div>
+          <div class="expense-change"><span>⬆️</span> 5%</div>
+
+          <div class="graph-container">
+            <div class="bar" style="--height: 60%"></div>
+            <div class="bar" style="--height: 35%"></div>
+            <div class="bar" style="--height: 45%"></div>
+            <div class="bar today" style="--height: 80%"></div>
+            <div class="bar" style="--height: 55%"></div>
+            <div class="bar" style="--height: 30%"></div>
+            <div class="bar" style="--height: 40%"></div>
+          </div>
+
+          <div class="days-labels">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span>
+            <span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+        </div>
+
+        <div class="expenses-card-right">
+          <div class="expense-title">
+            <span class="icon">📊</span> June 2025 Expenses
+          </div>
+          <div class="expense-amount">$12,000</div>
+          <div class="expense-change"><span>⬆️</span> 12%</div>
+
+          <div class="graph-container">
+            <div class="bar" style="--height: 60%"></div>
+            <div class="bar" style="--height: 35%"></div>
+            <div class="bar" style="--height: 45%"></div>
+            <div class="bar today" style="--height: 80%"></div>
+            <div class="bar" style="--height: 55%"></div>
+            <div class="bar" style="--height: 30%"></div>
+            <div class="bar" style="--height: 40%"></div>
+          </div>
+
+          <div class="days-labels">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span>
+            <span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="right-section">
+        <div class="logo" style="margin-bottom: 20px">
+          <img src="/finance-tracker/assests/budget.png" alt="logo" />
+          <span style="font-size: 22px; font-weight: 600">FinTrack Pro</span>
+        </div>
+
+        <div class="profile-header">
+          <img
+            src="/finance-tracker/assests/profile.png"
+            alt="Profile"
+            class="profile-pic"
+            id="userImage"
+          />
+          <div class="edit-icon" onclick="editProfile()">
+            <i class="fa-solid fa-pen"></i>
+          </div>
+          <h1 style="margin-top: 12px">
+            Hi, <span id="profileName">User</span>!
+          </h1>
+        </div>
+
+        <div class="profile-info">
+          <p>
+            <i class="fa-solid fa-user"></i>
+            <span id="profileNameDetail">User</span>
+          </p>
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            <span id="profilePhone">+91 0000000000</span>
+          </p>
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            <span id="profileEmail">user@example.com</span>
+          </p>
+        </div>
+
+        <div class="profile-actions">
+          <button class="sign-in" onclick="editProfile()">Edit Profile</button>
+          <button class="sign-in go-dashboard" onclick="goDashboard()">
+            Go to Dashboard
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const name = urlParams.get("name") || "USER";
+      const phone = urlParams.get("phone") || "+91 1234567890";
+      const email = urlParams.get("email") || "user@example.com";
+      const img = urlParams.get("image");
+
+      document.getElementById("profileName").innerText = name;
+      document.getElementById("profileNameDetail").innerText = name;
+      document.getElementById("profilePhone").innerText = phone;
+      document.getElementById("profileEmail").innerText = email;
+      if (img) {
+        document.getElementById("UserImage").src = img;
+      }
+
+      function editProfile() {
+        alert("Edit Profile feature coming soon!");
+      }
+
+      function goDashboard() {
+        window.location.href = "dashboard.html";
+      }
+    </script>
+  </body>
+</html>

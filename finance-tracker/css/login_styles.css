@@ -1,0 +1,666 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins",sans-serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT SECTION */
+/* .left-section {
+  flex: 1;
+  background: linear-gradient(to bottom, #f4d6f1, #f9f3d7);
+  padding: 0px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+ */
+
+
+
+.left-section {
+  flex: 1;
+  background-image: url("/assests/v882batch2-kul-03-e.jpg"); /* Replace with actual image path */
+  background-size: cover; /* Makes sure the image covers the whole section */
+  background-position: center; /* Centers the image */
+  padding: 0px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+
+
+/* RIGHT SECTION */
+.right-section {
+  flex: 1;
+  background: #fff;
+  padding: 50px 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 30px;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h1 {
+  margin-top: 30px;
+  font-size: 32px;
+}
+
+.subtext {
+  margin: 10px 0 30px;
+  color: #777;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 10px 0 5px;
+  font-weight: 500;
+}
+
+form label span {
+  color: red;
+}
+
+form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.forgot {
+  font-size: 13px;
+  color: rgba(113, 99, 186, 1);
+  text-align: right;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+
+.reset{
+  margin-top: 70px;
+}
+
+.reset-form{
+
+margin-top: 50px;
+}
+
+
+
+
+.submit{
+  background: rgba(113, 99, 186, 1);
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #fff;
+}
+
+.submit:hover {
+  background: rgb(85, 65, 182); /* Slightly lighter */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+
+.sign-in {
+  background: rgba(113, 99, 186, 1);
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.sign-in:hover {
+  background: rgb(85, 65, 182); /* Slightly lighter */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+
+.or {
+  text-align: center;
+  margin: 15px 0;
+  color: #aaa;
+}
+
+
+
+.signup {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.signup a {
+  color: rgba(113, 99, 186, 1);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.google-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;margin-top: 10px;
+}
+
+.google-btn img {
+  width: 18px;
+}
+
+
+
+
+/*Sign- up form */
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.login-text {
+  text-align: center;
+  font-size: 14px;
+}
+
+
+.login-text a {
+  color: rgba(113, 99, 186, 1);
+  text-decoration: none;
+  text-align: center;
+  margin: 10px 0;
+  
+
+}
+
+
+/*EXPENSES CARDS */
+
+
+
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-header img {
+  width: 20px;
+}
+
+.card-header span {
+  font-weight: 600;
+  color: #111;
+  font-size: 16px;
+}
+
+.expenses-card h2 {
+  font-size: 32px;
+  margin: 15px 0;
+  color: #111;
+}
+
+.rate-btn {
+  background: #d5f8d5;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.rate-btn img {
+  width: 12px;
+}
+
+.graph {
+  margin-top: 10px;
+  position: relative;
+}
+
+.graph .line {
+  height: 70px;
+  background: linear-gradient(to right, #e0f5c5, #f4f4f4);
+  border-radius: 10px;
+}
+
+.graph .bar {
+  position: absolute;
+  top: 0;
+  left: 48%;
+  width: 10px;
+  height: 70px;
+  background: rgb(133, 122, 184);
+  border-radius: 10px;
+}
+
+.graph .days {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000000;
+}
+
+.graph .days .active {
+  color: rgba(113, 99, 186, 1);
+  font-weight: bold;
+}
+
+.top-left-card {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+
+/*EXPENSE cards*/
+
+.expenses-card-left {
+  width: 350px;
+  padding: 20px;
+  background: rgba(233, 229, 255, 0.865);
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+
+  margin: 0px 0 350px 0px;
+}
+
+.expenses-card-right {
+  width: 350px;
+  padding: 20px;
+  background: rgba(233, 229, 255, 0.865);
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+
+
+  
+  border-radius: 15px;
+  
+  margin: 10px 0 10px 10px;
+}
+
+.expense-title {
+  font-weight: bold;
+  font-size: 14px;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.expense-amount {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 4px 0;
+  color: #111;
+}
+
+.expense-change {
+  font-size: 13px;
+  background: #e0fce0;
+  color: #22c55e;
+  padding: 4px 10px;
+  display: inline-flex;
+  border-radius: 12px;
+  align-items: center;
+  gap: 4px;
+}
+
+.graph-container {
+  margin-top: 12px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: linear-gradient(to top, #ffffff, rgb(204, 197, 237));
+  padding: 0 6px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.bar {
+  width: 10px;
+  background: linear-gradient(to top, #a26ee7, rgb(99, 89, 154));
+  height: var(--height);
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.bar.today {
+  background: #5538a6;
+}
+
+.days-labels {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #04060a;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6px;
+}
+
+
+
+/* ========== RESPONSIVENESS ========== */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    flex: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .right-section {
+    padding: 40px 30px;
+  }
+
+  .logo span {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  /* Reduce card size */
+  .expenses-card-left,
+  .expenses-card-right {
+    width: 80%;
+    margin: 10px auto;
+    padding: 16px;
+  }
+
+  .expense-amount {
+    font-size: 24px;
+  }
+
+  .expense-title {
+    font-size: 13px;
+  }
+}
+
+
+/* Mobiles (480px and below) */
+@media (max-width: 480px) {
+  .right-section {
+    padding: 30px 20px;
+  }
+
+  .logo img {
+    width: 24px;
+  }
+
+  .logo span {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .submit,
+  .sign-in,
+  .google-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  /* Reduce card size more */
+  .expenses-card-left,
+  .expenses-card-right {
+    width: 90%;
+    margin: 10px auto;
+    padding: 14px;
+  }
+
+  .expense-title {
+    font-size: 12px;
+  }
+
+  .expense-amount {
+    font-size: 20px;
+  }
+
+  .expense-change {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+
+  .graph .days {
+    font-size: 11px;
+  }
+}
+
+
+
+
+/* ERROR TEXT IN Signup FORM */
+.error-message {
+  color: #e63946;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+
+
+/* PASSWORD */
+
+
+.password-hint ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.password-hint li {
+  margin-bottom: 3px;
+  list-style-type: disc;
+}
+
+.password-hint {
+  color: #501111;
+  font-size: 13px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+
+
+/* show and re enter PASSWORD  */
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+}
+
+
+
+/* Profile page  */
+body {
+        background: #f8f9ff;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .profile-header {
+        position: relative;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .profile-pic {
+        width: 120px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #d6d6ff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        display: block;
+        margin: 0 auto;
+}
+
+
+      .edit-icon {
+        position: absolute;
+        top: 5px;
+        right: 115px;
+        background: #fff;
+        border-radius: 50%;
+        padding: 6px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+      }
+
+      .edit-icon:hover {
+        background: #efefff;
+      }
+
+      .profile-info {
+        background: linear-gradient(135deg, #ecebff, #f8f9ff);
+        border-radius: 16px;
+        padding: 25px;
+        margin: 20px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .profile-info p {
+        font-size: 18px;
+        margin: 18px 0;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .profile-actions {
+        display: flex;
+        gap: 14px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+      }
+
+      .sign-in,
+      .google-btn {
+        flex: 1;
+        text-align: center;
+        background: #7f6eff;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 16px;
+      }
+
+      .sign-in:hover,
+      .google-btn:hover {
+        background: #685bda;
+      }
+
+      .go-dashboard {
+        background: #bdb8ff;
+      }
+
+      .go-dashboard:hover {
+        background: #a9a3f7;
+      }
+
+      .container {
+        display: flex;
+        padding: 30px;
+        gap: 30px;
+      }
+
+      .left-section {
+        flex: 1;
+      }
+
+      .right-section {
+        flex: 1;
+      }
+    

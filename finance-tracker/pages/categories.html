@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categories - Expense Tracker</title>
+    <link rel="stylesheet" href="/finance-tracker/css/categories_styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Logo section -->
+      <div class="logo">
+        <img src="/finance-tracker/assests/budget.png" alt="Logo" />
+        <p>FinTrack Pro</p>
+      </div>
+      <ul class="menu">
+        <li>
+          <a href="dashboard.html"
+            ><i class="fas fa-chart-line"></i><span>Dashboard</span></a
+          >
+        </li>
+        <li class="active">
+          <a href="#"><i class="fas fa-list-alt"></i><span>Expenses</span></a>
+        </li>
+        <li>
+          <a href="profile.html"
+            ><i class="fas fa-user"></i><span>My Profile</span></a
+          >
+        </li>
+        <li class="logout">
+          <a href="login.html"
+            ><i class="fas fa-sign-out-alt"></i><span>Logout</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="main--content">
+      <div class="header--wrapper">
+        <div class="header--title"><h2>Categories & Expenses</h2></div>
+        <div class="user--info">
+          <div class="search--box">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" placeholder="Search" />
+          </div>
+          <img src="/finance-tracker/assests/profile.png" />
+        </div>
+      </div>
+
+      <!-- Recent Expenses -->
+      <div class="container">
+        <div class="top-bar">
+          <h2>Recent Expenses</h2>
+          <button class="add-expense-btn" onclick="openModal()">
+            <span class="plus-icon">+</span> Add New Expense
+          </button>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Category</th>
+              <th>Notes</th>
+              <th>Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2025-06-01</td>
+              <td>Food</td>
+              <td>Lunch at Cafe Coffee Day</td>
+              <td class="price">$12</td>
+              <td>
+                <button class="edit-btn"><i class="far fa-edit"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-06-03</td>
+              <td>Transportation</td>
+              <td>Uber ride to office</td>
+              <td class="price">$8</td>
+              <td>
+                <button class="edit-btn"><i class="far fa-edit"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-06-05</td>
+              <td>Groceries</td>
+              <td>Monthly grocery shopping at Walmart</td>
+              <td class="price">$94</td>
+              <td>
+                <button class="edit-btn"><i class="far fa-edit"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-06-07</td>
+              <td>Entertainment</td>
+              <td>Netflix monthly subscription</td>
+              <td class="price">$15.99</td>
+              <td>
+                <button class="edit-btn"><i class="far fa-edit"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-06-12</td>
+              <td>Health</td>
+              <td>Doctor consultation and medicine</td>
+              <td class="price">$45</td>
+              <td>
+                <button class="edit-btn"><i class="far fa-edit"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-06-13</td>
+              <td>Utilities</td>
+              <td>Electricity and internet bills</td>
+              <td class="price">$120</td>
+              <td>
+                <button class="edit-btn"><i class="far fa-edit"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-06-14</td>
+              <td>Dining</td>
+              <td>Dinner with friends</td>
+              <td class="price">$37</td>
+              <td>
+                <button class="edit-btn"><i class="far fa-edit"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-06-15</td>
+              <td>Education</td>
+              <td>Online course on Data Analytics</td>
+              <td class="price">$49.99</td>
+              <td>
+                <button class="edit-btn"><i class="far fa-edit"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-06-15</td>
+              <td>Subscription</td>
+              <td>Spotify Premium</td>
+              <td class="price">$9.99</td>
+              <td>
+                <button class="edit-btn"><i class="far fa-edit"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pagination">
+          <button>&laquo;</button>
+          <button>&lt;</button>
+          <button class="active">1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>&gt;</button>
+          <button>&raquo;</button>
+        </div>
+      </div>
+    </div>
+
+    <!--LEKHA'S CODE: FORM ENDS HERE-->
+
+    <!-- Modal Form -->
+    <div class="modal" id="expenseModal">
+      <div class="modal-box">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h2>Add New Expense Details</h2>
+        <form>
+          <label for="expense-date">Date <span class="required">*</span></label>
+          <input type="date" id="expense-date" name="expense-date" required />
+
+          <label for="expense-category"
+            >Category <span class="required">*</span></label
+          >
+          <select id="expense-category" name="expense-category" required>
+            <option value="">Select Category</option>
+            <option value="Food">Food</option>
+            <option value="Travel">Travel</option>
+            <option value="Grocery">Grocery</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Education">Education</option>
+            <option value="Others">Others</option>
+          </select>
+          <a href="#" class="add-category">+ Add New Category</a>
+
+          <label for="expense-amount"
+            >Amount <span class="required">*</span></label
+          >
+          <input
+            type="text"
+            id="expense-amount"
+            name="expense-amount"
+            placeholder="amount"
+            required
+          />
+
+          <label for="expense-description">Description</label>
+          <textarea
+            id="expense-description"
+            name="expense-description"
+            placeholder="description"
+          ></textarea>
+
+          <label for="expense-file">Attach File (PDF, JSON, DOCX, TXT)</label>
+          <input
+            type="file"
+            id="expense-file"
+            name="expense-file"
+            accept=".pdf,.json,.docx,.txt"
+          />
+
+          <div class="form-buttons">
+            <button type="button" class="cancel-button" onclick="closeModal()">
+              Cancel
+            </button>
+            <button type="submit" class="save-button">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--LEKHA'S CODE: FORM ENDS HERE-->
+
+    <!-- Scripts -->
+    <script>
+      function openModal() {
+        document.getElementById("expenseModal").classList.add("show");
+      }
+      function closeModal() {
+        document.getElementById("expenseModal").classList.remove("show");
+      }
+    </script>
+  </body>
+</html>

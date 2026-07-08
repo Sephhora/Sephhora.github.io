@@ -1,0 +1,87 @@
+
+#toggle-btn {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: none;
+  padding: 4.5px 12px;
+  padding-left: 0;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+
+/* Responsive styles for max-width 400px */
+@media (max-width: 400px) {
+
+  /* Show toggle button inside header */
+  #toggle-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    transform: none;
+  }
+
+  .header--wrapper {
+    position: relative;        /* Allows toggle-btn absolute positioning inside */
+    padding-left: 50px;        /* Leave space for the button */
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    position: fixed;
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  body {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .main--content {
+    width: 100%;
+    margin-left: 0;
+    padding: 1rem 10px 20px 10px;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  .header--wrapper,
+  .stats-cards-container,
+  .graph--container,
+  .tabular--wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .stats-cards-slider {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    overflow-x: auto;
+    scrollbar-width: none;       /* Firefox */
+    -ms-overflow-style: none;    /* IE 10+ */
+  }
+
+  .stats-cards-slider::-webkit-scrollbar {
+    display: none;               /* Chrome, Safari, Edge */
+  }
+
+  .stats-cards {
+    flex: 0 0 48%;
+    box-sizing: border-box;
+  }
+
+  .graph--container,
+  .table--container {
+    overflow-x: auto;
+  }
+}

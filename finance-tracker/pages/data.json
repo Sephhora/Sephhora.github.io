@@ -1,0 +1,96 @@
+{
+  "weekly": {
+    "income": {
+      "summary": 2900,
+      "trend": [400, 350, 420, 380, 390, 480, 480],
+      "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    },
+    "expense": {
+      "summary": 1550,
+      "trend": [200, 150, 220, 180, 190, 300, 310],
+      "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      "method": {
+        "labels": ["UPI", "Cash", "Card"],
+        "data": [550, 480, 520]
+      },
+      "category": {
+        "labels": ["Food", "Transport", "Medical", "Entertainment", "Bills"],
+        "data": [400, 300, 200, 350, 300]
+      }
+    },
+    "saving": {
+      "summary": 1350,
+      "skills": {
+        "labels": ["Discipline", "Planning", "Tracking", "Consistency"],
+        "data": [80, 70, 85, 75]
+      }
+    }
+  },
+
+  "monthly": {
+    "income": {
+      "summary": 34800,
+      "trend": [2800, 2900, 3000, 2700, 3200, 2900, 2800, 3100, 2900, 2600, 2700, 2700],
+      "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    },
+    "expense": {
+      "summary": 19720,
+      "trend": [1200, 1400, 1500, 1600, 1700, 1500, 1400, 1600, 1300, 1200, 1300, 2020],
+      "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      "method": {
+        "labels": ["UPI", "Cash", "Card"],
+        "data": [7800, 5800, 6120]
+      },
+      "category": {
+        "labels": ["Food", "Transportation", "Rent", "Bills", "Shopping", "Healthcare"],
+        "data": [4000, 2600, 4200, 3000, 2400, 2520]
+      }
+    },
+    "saving": {
+      "summary": 15080,
+      "skills": {
+        "labels": ["Spending", "Saving", "Investing", "Budgeting"],
+        "data": [75, 65, 80, 70]
+      }
+    }
+  },
+
+  "yearly": {
+    "income": {
+      "summary": 140000,
+      "trend": [33000, 34000, 35000, 38000],
+      "labels": ["2021", "2022", "2023", "2024"]
+    },
+    "expense": {
+      "summary": 85000,
+      "trend": [20000, 21000, 22000, 22000],
+      "labels": ["2021", "2022", "2023", "2024"],
+      "method": {
+        "labels": ["UPI", "Cash", "Card"],
+        "data": [34000, 27000, 24000]
+      },
+      "category": {
+        "labels": ["Rent", "Food", "Healthcare", "Travel", "Education", "Subscriptions", "Misc", "Tax"],
+        "data": [20000, 15000, 5000, 8000, 7000, 3000, 4000, 16000]
+      }
+    },
+    "saving": {
+      "summary": 55000,
+      "skills": {
+        "labels": ["Goal Setting", "Emergency Fund", "Retirement", "Investments"],
+        "data": [90, 85, 80, 95]
+      }
+    }
+  },
+
+  "recent_transactions": [
+    { "item": "Lunch - Subway", "amount": 11.50 },
+    { "item": "Uber Ride", "amount": 7.80 },
+    { "item": "Amazon - Books", "amount": 32.99 },
+    { "item": "Spotify Subscription", "amount": 9.99 },
+    { "item": "Salary - June", "amount": 3200 },
+    { "item": "Freelance - UI Design", "amount": 850 },
+    { "item": "Medical - Pharmacy", "amount": 23.45 },
+    { "item": "Electricity Bill", "amount": 95 }
+  ]
+}
