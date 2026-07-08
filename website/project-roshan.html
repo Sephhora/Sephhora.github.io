@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -266,13 +266,17 @@
     >
       <!-- Background image or video -->
       <div class="absolute inset-0">
-        <!-- <img src="/path-to-your-image.jpg" alt="Hero Background" class="object-cover w-full h-full opacity-70" /> -->
+        <img
+          src="/website/img/Project-roshan-hero.jpg"
+          alt="Hero Background"
+          class="object-cover w-full h-full opacity-70"
+        />
         <!-- Or for video:
       <video autoplay muted loop class="object-cover w-full h-full opacity-70">
         <source src="/path-to-your-video.mp4" type="video/mp4">
       </video>
       -->
-        <video
+        <!-- <video
           autoplay
           muted
           loop
@@ -281,7 +285,7 @@
         >
           <source src="img/Project-roshan-hero-section.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> -->
       </div>
 
       <!-- Overlay Content -->
@@ -693,7 +697,7 @@
         },
         {
           threshold: 0.2, // Trigger when 20% of the element is visible
-        }
+        },
       );
 
       // Start observing any element with the fade-in-on-scroll class
